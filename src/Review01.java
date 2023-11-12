@@ -16,5 +16,6 @@ public class Review01 {
           public static int tax(int num1) {
           int result = num1 /10;
           return result;
+
       }
 }
