@@ -8,13 +8,17 @@ public class Review01 {
       double result ;
       result = tax(num1); //消費税を代入
 
-      System.out.println( num1 + "円の商品の税込価格は" + (num1 + result + "円") + ("（消費税は" + result + "円）です。"));
+      double price = num1 + result; //税込価格を算出
+      System.out.println(
+              num1 + "円の商品の税込価格は"
+            + Math.round(price)+"円"
+            + ("（消費税は" + Math.round(result) + "円）です。"));
     }
 
     //消費税額の算出
     public static double tax(int num1) {
-        double result = num1 * 0.1;
-        return result;
+      double result = Math.round(num1 /10);
+      return result;
     }
 
 }
